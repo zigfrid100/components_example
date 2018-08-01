@@ -1,0 +1,24 @@
+<h1> Select Friend: </h1>
+
+<ul>
+  <li *ngFor="let friend of friends" style="cursor:pointer" [class.isSelected]="friend == selectedFriend" (click)="onFriendSelect(friend)">
+    <h2> {{friend.name}} </h2>
+  </li>
+</ul>
+
+<!--
+<div *ngIf="selectedFriend != null" class="isSelectedInfo">
+  <div>
+    <label>name:</label>
+    <input class="isSelectedInfo" type="text" [(ngModel)]="selectedFriend.name">
+  </div>
+  <div>
+    <label>github:</label>
+    <span>{{selectedFriend.github}}</span>
+  </div>
+</div>
+-->
+
+<div *ngIf="selectedFriend != null">
+  <app-friend [friend]="selectedFriend"></app-friend>
+</div>

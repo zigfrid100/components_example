@@ -1,0 +1,43 @@
+<h1>Input Text I</h1>
+
+<h2>Your Text: {{text}}</h2>
+<div>
+  <input type="text" [(ngModel)]="text" maxlength="10" minlength="9" required="minlength">
+</div>
+
+
+<h1 style="font-style: oblique; font-family:Times New Roman ; color: aqua">Input Text II</h1>
+<button (click)="onClickMe()">Click me!</button>
+<p>{{clickMessage}}</p>
+
+<!--
+<h1>Input Text III</h1>
+<input (keyup)="onKey1($event)">
+<p>{{values1}}</p>
+
+
+<h1>Input Text IV</h1>
+<input (keyup)="onKey2($event)">
+<p>{{values2}}</p>
+
+
+<h1>Input Text V</h1>
+<input #box (keyup)="0">
+<p>{{box.value}}</p>
+
+
+<h1>Input Text VI</h1>
+<input #box1 (keyup.enter)="onKey3(box1.value)" (blur)="onKey3(box1.value)">
+<p>{{values3}}</p>
+-->
+
+<h1>Input Text VII</h1>
+<input #newHero
+       (keyup.enter)="addHero(newHero.value)"
+       (blur)="addHero(newHero.value); newHero.value='' ">
+
+<button (click)="addHero(newHero.value)">Add</button>
+
+<ul>
+  <li *ngFor="let hero of people" >{{hero}} <button (click)="deleteHerro(hero)">Delete</button></li>
+</ul>

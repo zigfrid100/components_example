@@ -1,0 +1,9 @@
+
+<label class="container">
+  <input type="checkbox" [(ngModel)]="theCheckbox"  data-md-icheck (change)="toggleVisibility($event)"/>
+
+
+  <span *ngIf="marked" style="color: red">{{friend.name}}</span><span *ngIf="!marked" style="color: green">{{friend.name}}</span>
+
+  <span class="checkmark"></span>
+</label>

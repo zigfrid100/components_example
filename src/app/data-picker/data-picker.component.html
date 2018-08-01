@@ -1,0 +1,27 @@
+<div>
+<h1>Select Date (simple)</h1>
+
+<label>Datum : {{date}} </label>
+
+<input *ngIf="date == null" type="date" max="2019-12-31" min="2000-01-01" class="forInput"
+       [(ngModel)]="date" required title="Enter a date in this format YYYY-MM-DD">
+
+<span class="validity"></span>
+
+
+<button *ngIf="date != null" type="button" (click)="editDate()"> Edit + </button>
+
+</div>
+
+
+<div class="">
+
+  <h1>Select Date (material)</h1>
+<mat-form-field>
+  <input [(ngModel)]="date" matInput [matDatepicker]="picker" placeholder="Choose a date">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+</div>
+
+

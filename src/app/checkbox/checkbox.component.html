@@ -1,0 +1,40 @@
+
+<app-hello name="{{ name1 }}"></app-hello>
+
+<label class="container">
+  <input type="checkbox" [(ngModel)]="theCheckbox"  data-md-icheck (change)="toggleVisibility($event)"/>
+
+
+  Checkbox is <span *ngIf="marked">checked</span><span *ngIf="!marked">unchecked</span>
+
+  <span class="checkmark"></span>
+</label>
+
+<div>And <b>ngModel</b> also works, it's value is <b>{{theCheckbox}}</b></div>
+
+
+<app-hello name="{{ name2 }}"></app-hello>
+
+<tr *ngFor="let friend of friends">
+<app-checkbox-item [friend]="friend"></app-checkbox-item>
+</tr>
+
+
+
+<!--
+<table>
+  <tr>
+    <th>Option</th>
+    <th>Name</th>
+  </tr>
+  <tr *ngFor="let friend of friends">
+    <td>
+      <p></p>
+    </td>
+    <td>
+      <p > {{friend.name}} </p>
+    </td>
+  </tr>
+
+</table>
+-->
