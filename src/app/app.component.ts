@@ -11,4 +11,5 @@ import { Routes } from '@angular/router';
 export class AppComponent {
 
   navLinks: Routes = routes;
+  title = 'app';
 }

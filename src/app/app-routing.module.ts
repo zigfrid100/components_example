@@ -1,3 +1,4 @@
+import { GroupComponent } from './dynamically/group/group.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -11,7 +12,8 @@ export const routes: Routes = [
   { path: 'data-picker', component: DataPickerComponent, data: {displayName: 'Dataiicker'}},
   { path: 'input' , component: InputCustomComponent, data: {displayName: 'Input'}},
   { path: 'checkbox' , component: CheckboxComponent, data: {displayName: 'Checkbox'}},
-  { path: 'repos', component: ReposComponent, data: {displayName: 'Repos'}}
+  { path: 'repos', component: ReposComponent, data: {displayName: 'Repos'}},
+  { path: 'dynamically create component' , component: GroupComponent, data: {displayName: 'Dynamicllay'}}
 ];
 
 @NgModule({

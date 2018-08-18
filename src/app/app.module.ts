@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
-
 import { AppComponent } from './app.component';
 import { FriendComponent } from './friend/friend.component';
 import { GithubService} from './github.service';
@@ -10,14 +9,10 @@ import { DataPickerComponent } from './data-picker/data-picker.component';
 import { InputCustomComponent } from './input-custom/input-custom.component';
 import { HelloComponent } from './hello/hello.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
-
-
 import { AppRoutingModule } from './/app-routing.module';
 import { ReposComponent } from './repos/repos.component';
 
-
-
-//Angular Material Components
+// Angular Material Components
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCheckboxModule} from '@angular/material';
 import {MatButtonModule} from '@angular/material';
@@ -51,6 +46,9 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatNativeDateModule} from '@angular/material';
 import { CheckboxItemComponent } from './checkbox-item/checkbox-item.component';
+import { AComponent } from './dynamically/a/a.component';
+import { BComponent } from './dynamically/b/b.component';
+import { GroupComponent } from './dynamically/group/group.component';
 
 
 
@@ -63,7 +61,10 @@ import { CheckboxItemComponent } from './checkbox-item/checkbox-item.component';
     ReposComponent,
     CheckboxComponent,
     HelloComponent,
-    CheckboxItemComponent
+    CheckboxItemComponent,
+    AComponent,
+    BComponent,
+    GroupComponent
   ],
   imports: [
     BrowserModule,
@@ -105,6 +106,7 @@ import { CheckboxItemComponent } from './checkbox-item/checkbox-item.component';
     MatNativeDateModule
   ],
   providers: [GithubService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [AComponent, BComponent, GroupComponent, HelloComponent]
 })
 export class AppModule { }
