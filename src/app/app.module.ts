@@ -49,6 +49,9 @@ import { CheckboxItemComponent } from './checkbox-item/checkbox-item.component';
 import { AComponent } from './dynamically/a/a.component';
 import { BComponent } from './dynamically/b/b.component';
 import { GroupComponent } from './dynamically/group/group.component';
+import { InjectedComponent } from './dynamically_inject_directive/injected/injected.component';
+import { InjectDirective } from './dynamically_inject_directive/inject.directive';
+import { ParentComponent } from './dynamically_inject_directive/parent/parent.component';
 
 
 
@@ -64,7 +67,10 @@ import { GroupComponent } from './dynamically/group/group.component';
     CheckboxItemComponent,
     AComponent,
     BComponent,
-    GroupComponent
+    GroupComponent,
+    InjectedComponent,
+    InjectDirective,
+    ParentComponent
   ],
   imports: [
     BrowserModule,
@@ -107,6 +113,6 @@ import { GroupComponent } from './dynamically/group/group.component';
   ],
   providers: [GithubService],
   bootstrap: [AppComponent],
-  entryComponents: [AComponent, BComponent, GroupComponent, HelloComponent]
+  entryComponents: [AComponent, BComponent, GroupComponent, HelloComponent , InjectedComponent]
 })
 export class AppModule { }

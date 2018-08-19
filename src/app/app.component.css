@@ -17,3 +17,9 @@ nav a:hover {
 nav a.active {
   color: #039be5;
 }
+
+.appInject {
+  border: 1px dashed #da1;
+  display: inline-block;
+  padding: 10px;
+}

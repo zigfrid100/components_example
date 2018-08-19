@@ -3,5 +3,6 @@
   width: 200px;
   height: 100px;
   margin: 1em;
-  background-color: brown;
+  background-color: rgb(68, 190, 88);
+  border: 5px;
 }
