@@ -6,6 +6,11 @@
   </li>
 </ul>
 
+<h1>Zeitmessung beim For loop und Foreach</h1>
+<p>For loop: <b> {{timeForLoop}} </b> sec</p>
+<p>Foreach: <b> {{timeForeach}} </b> sec </p>
+<p>Diff: <b  [ngStyle]="{'color': isTimeForeachBetter() }" > {{dif}}  </b>% </p>
+
 <!--
 <div *ngIf="selectedFriend != null" class="isSelectedInfo">
   <div>
