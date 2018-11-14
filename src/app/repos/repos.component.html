@@ -1,3 +1,4 @@
+<div id="contentToConvert">
 <h1> Select Friend: </h1>
 
 <ul>
@@ -6,11 +7,14 @@
   </li>
 </ul>
 
+<button (click)="captureScreen()">Download PDF</button>
+
+<div *ngIf="false" >
 <h1>Zeitmessung beim For loop und Foreach</h1>
 <p>For loop: <b> {{timeForLoop}} </b> sec</p>
 <p>Foreach: <b> {{timeForeach}} </b> sec </p>
 <p>Diff: <b  [ngStyle]="{'color': isTimeForeachBetter() }" > {{dif}}  </b>% </p>
-
+</div>
 <!--
 <div *ngIf="selectedFriend != null" class="isSelectedInfo">
   <div>
@@ -24,6 +28,10 @@
 </div>
 -->
 
+<div *ngFor="let item of pagesValue; let i = index">
 <div *ngIf="selectedFriend != null">
-  <app-friend [friend]="selectedFriend"></app-friend>
+  <app-friend id="friend{{i}}" [friend]="selectedFriend"></app-friend>
+</div>
+</div>
+
 </div>
